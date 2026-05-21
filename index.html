@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NICE-EV 2026 — Nusantara International Conference on Electric Vehicle Architectures</title>
+<meta name="description" content="NICE-EV 2026 — premier international academic forum on Electric Vehicle architectures, hosted in Indonesia's new capital Nusantara. August 20, 2026.">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="apple-touch-icon" href="assets/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- =========================================================
+     SVG ICON SPRITE (hidden) — referenced via <use href="#i-…">
+     ========================================================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-grad-cap" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 4 3 6 3s6-1.34 6-3v-5"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+  <symbol id="i-radio" viewBox="0 0 24 24"><path d="M4.93 19.07a10 10 0 0 1 0-14.14M7.76 16.24a6 6 0 0 1 0-8.48M16.24 7.76a6 6 0 0 1 0 8.48M19.07 4.93a10 10 0 0 1 0 14.14"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+  <symbol id="i-recycle" viewBox="0 0 24 24"><path d="M7 19H4.8a1.8 1.8 0 0 1-1.57-.88 1.78 1.78 0 0 1 0-1.78L7.2 9.5"/><path d="M11 19h8.2a1.83 1.83 0 0 0 1.56-.89 1.78 1.78 0 0 0 0-1.78l-1.23-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.3 13.6 7.2 9.5 3.1 10.6"/><path d="m9.34 5.81 1.1-1.89A1.83 1.83 0 0 1 12 3a1.78 1.78 0 0 1 1.55.89l3.94 6.84"/><path d="m13.38 9.63 4.1 1.1 1.1-4.1"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
+  <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M2 9V7c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v2a3 3 0 0 0 0 6v2c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2v-2a3 3 0 0 0 0-6z"/><line x1="13" y1="5" x2="13" y2="19"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></symbol>
+  <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+  <symbol id="i-microscope" viewBox="0 0 24 24"><path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+  <symbol id="i-wine" viewBox="0 0 24 24"><path d="M8 22h8M7 10h10M12 15v7M12 15a5 5 0 0 0 5-5V3H7v7a5 5 0 0 0 5 5z"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></symbol>
+</svg>
+
+<!-- =========================================================
+     NAV
+     ========================================================= -->
+<nav>
+  <a href="#home" class="nav-logo">
+    <img src="assets/images/NICE-EV.png" alt="NICE-EV logo" class="nav-logo-img">
+    <span class="nav-logo-text">NICE<span>-EV</span> 2026</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#scopes">Scopes</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#speakers">Speakers</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#fees">Fees</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+  </ul>
+  <a href="#submission" class="nav-cta">
+    <svg class="icon"><use href="#i-send"/></svg>
+    Submit Paper
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <svg class="icon icon-lg"><use href="#i-menu"/></svg>
+  </button>
+</nav>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Call for Papers Now Open</div>
+    <h1 class="hero-title">
+      <span class="line1">NICE-EV</span>
+      <span class="line2">2026</span>
+      <span class="line3">Nusantara International Conference on Electric Vehicle Architectures</span>
+    </h1>
+    <p class="hero-subtitle">"Engineering the Mobility Backbone of Indonesia's Future Capital"</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon"><svg class="icon"><use href="#i-calendar"/></svg></div>
+        <div class="hero-meta-text">
+          <small>Date</small>
+          <strong>August 20, 2026</strong>
+        </div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon"><svg class="icon"><use href="#i-map-pin"/></svg></div>
+        <div class="hero-meta-text">
+          <small>Location</small>
+          <strong>Nusantara / Balikpapan, Indonesia</strong>
+        </div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon"><svg class="icon"><use href="#i-grad-cap"/></svg></div>
+        <div class="hero-meta-text">
+          <small>Organizer</small>
+          <strong>THD OIKN × FSTI ITK</strong>
+        </div>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="#submission" class="btn-primary">
+        Submit Your Paper
+        <svg class="icon"><use href="#i-arrow-right"/></svg>
+      </a>
+      <a href="#scopes" class="btn-secondary">View Scopes</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     COUNTDOWN
+     ========================================================= -->
+<div class="countdown-bar">
+  <div>
+    <div class="countdown-label">
+      <svg class="icon"><use href="#i-bolt"/></svg>
+      CFP Deadline Countdown
+    </div>
+    <div style="font-size:0.75rem;color:var(--text2);margin-top:2px;">
+      Full Paper Submission: <strong style="color:var(--accent3)">June 25, 2026</strong>
+    </div>
+  </div>
+  <div class="countdown-items">
+    <div class="cd-item"><div class="cd-num" id="cd-days">--</div><div class="cd-unit">Days</div></div>
+    <div class="cd-item"><div class="cd-num" id="cd-hours">--</div><div class="cd-unit">Hours</div></div>
+    <div class="cd-item"><div class="cd-num" id="cd-mins">--</div><div class="cd-unit">Minutes</div></div>
+    <div class="cd-item"><div class="cd-num" id="cd-secs">--</div><div class="cd-unit">Seconds</div></div>
+  </div>
+  <div class="countdown-note">Main Conference: <strong>August 20, 2026</strong></div>
+</div>
+
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
+<section class="about reveal" id="about">
+  <div class="section-label">About the Conference</div>
+  <div class="section-title">Where Research Meets<br>the Road to Nusantara</div>
+  <div class="section-divider"></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>NICE-EV 2026 is the premier international academic forum dedicated to Electric Vehicle architectures and their role in shaping the mobility infrastructure of Indonesia's new capital city, Nusantara (IKN).</p>
+      <p>Jointly organized by the Technical Hub Division of the IKN Authority (THD OIKN) and the Faculty of Science and Technology in Industry at the Institut Teknologi Kalimantan (FSTI ITK), this conference brings together researchers, engineers, policymakers, and industry leaders from across the globe.</p>
+      <p>From advanced power electronics to socio-economic policy, NICE-EV 2026 addresses the full spectrum of challenges and opportunities in building a smart, electric, and sustainable capital city from the ground up.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Research Scopes</div></div>
+      <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Invited Speakers</div></div>
+      <div class="stat-card"><div class="stat-num">Aug 20</div><div class="stat-label">Main Conference</div></div>
+      <div class="stat-card"><div class="stat-num">IKN</div><div class="stat-label">Nusantara, Kalimantan</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SCOPES
+     ========================================================= -->
+<section id="scopes" class="reveal">
+  <div class="section-label">Research Scopes</div>
+  <div class="section-title">Topics of Interest</div>
+  <div class="section-divider"></div>
+  <div class="scopes-grid">
+    <div class="scope-card">
+      <div class="scope-num">01</div>
+      <div class="scope-icon"><svg class="icon icon-lg"><use href="#i-bolt"/></svg></div>
+      <div class="scope-title">Advanced Vehicle Propulsion &amp; Power Electronics</div>
+      <div class="scope-desc">Focuses on the internal architecture of the EV itself — from motor drives to thermal management in high-humidity tropical environments.</div>
+      <div class="scope-tags">
+        <span class="scope-tag">Motor Drives</span>
+        <span class="scope-tag">BMS</span>
+        <span class="scope-tag">Power Converters</span>
+        <span class="scope-tag">Fast-Charging</span>
+        <span class="scope-tag">Thermal Management</span>
+      </div>
+    </div>
+    <div class="scope-card">
+      <div class="scope-num">02</div>
+      <div class="scope-icon"><svg class="icon icon-lg"><use href="#i-radio"/></svg></div>
+      <div class="scope-title">Intelligent Transport Systems (ITS) &amp; V2X Connectivity</div>
+      <div class="scope-desc">Digital architecture and vehicle-to-city communication. Targets computer science and telecommunications researchers.</div>
+      <div class="scope-tags">
+        <span class="scope-tag">V2X</span>
+        <span class="scope-tag">5G Integration</span>
+        <span class="scope-tag">Autonomous Driving</span>
+        <span class="scope-tag">IoT</span>
+        <span class="scope-tag">Cybersecurity</span>
+      </div>
+    </div>
+    <div class="scope-card">
+      <div class="scope-num">03</div>
+      <div class="scope-icon"><svg class="icon icon-lg"><use href="#i-city"/></svg></div>
+      <div class="scope-title">Urban Mobility Architectures &amp; Infrastructure Integration</div>
+      <div class="scope-desc">Bridges civil engineering and urban design for EV-ready infrastructure in Nusantara's forest-city environment.</div>
+      <div class="scope-tags">
+        <span class="scope-tag">Wireless Charging Roads</span>
+        <span class="scope-tag">Modular Docking</span>
+        <span class="scope-tag">Mobility Hubs</span>
+      </div>
+    </div>
+    <div class="scope-card">
+      <div class="scope-num">04</div>
+      <div class="scope-icon"><svg class="icon icon-lg"><use href="#i-sun"/></svg></div>
+      <div class="scope-title">Renewable Energy Integration &amp; Charging Logistics</div>
+      <div class="scope-desc">How EVs retrieve energy and manage demand within a smart city grid powered by renewables.</div>
+      <div class="scope-tags">
+        <span class="scope-tag">Solar Charging</span>
+        <span class="scope-tag">Energy Harvesting</span>
+        <span class="scope-tag">Battery Swapping</span>
+        <span class="scope-tag">Scheduling</span>
+      </div>
+    </div>
+    <div class="scope-card">
+      <div class="scope-num">05</div>
+      <div class="scope-icon"><svg class="icon icon-lg"><use href="#i-recycle"/></svg></div>
+      <div class="scope-title">Sustainable Materials &amp; Circular Economy</div>
+      <div class="scope-desc">Lifecycle analysis of EV technology — materials science and environmental engineering for mass EV adoption in Kalimantan.</div>
+      <div class="scope-tags">
+        <span class="scope-tag">Battery Recycling</span>
+        <span class="scope-tag">Second-Life</span>
+        <span class="scope-tag">LCA</span>
+        <span class="scope-tag">Lightweight Materials</span>
+      </div>
+    </div>
+    <div class="scope-card">
+      <div class="scope-num">06</div>
+      <div class="scope-icon"><svg class="icon icon-lg"><use href="#i-scale"/></svg></div>
+      <div class="scope-title">Policy, Socio-Economics &amp; Human-Centric Mobility</div>
+      <div class="scope-desc">The "social architecture" — how electric mobility transition affects people and the economy of Nusantara.</div>
+      <div class="scope-tags">
+        <span class="scope-tag">Techno-Economic Analysis</span>
+        <span class="scope-tag">Regulatory Frameworks</span>
+        <span class="scope-tag">Consumer Behavior</span>
+        <span class="scope-tag">Inclusive Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TIMELINE
+     ========================================================= -->
+<section class="timeline reveal" id="timeline">
+  <div class="section-label">Important Dates</div>
+  <div class="section-title">Conference Timeline</div>
+  <div class="section-divider"></div>
+  <div class="timeline-items">
+    <div class="timeline-item active">
+      <div class="tl-date"><strong>May 20, 2026</strong>Wednesday</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-content">
+        <div class="tl-badge go">Live Now</div>
+        <div class="tl-title">Call for Papers (CFP) Launch</div>
+        <div class="tl-note">Website and EasyChair submission portal are now open.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date"><strong>June 25, 2026</strong>Thursday</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-content">
+        <div class="tl-badge">Deadline</div>
+        <div class="tl-title">Full Paper Submission Deadline</div>
+        <div class="tl-note">Authors have approximately 5 weeks from CFP launch to submit their full papers.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date"><strong>July 15, 2026</strong>Wednesday</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-content">
+        <div class="tl-title">Notification of Acceptance</div>
+        <div class="tl-note">Authors will be notified of the review outcome by this date.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date"><strong>August 1, 2026</strong>Saturday</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-content">
+        <div class="tl-title">Camera-Ready &amp; Registration Deadline</div>
+        <div class="tl-note">Final manuscripts and registration fees are due to lock in presentation schedule.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date"><strong>August 10, 2026</strong>Monday</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-content">
+        <div class="tl-title">Conference Program Released</div>
+        <div class="tl-note">Final schedule released so attendees can book travel to the Balikpapan / IKN area.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date"><strong>August 20, 2026</strong>Thursday</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-content">
+        <div class="tl-badge">Main Event</div>
+        <div class="tl-title">NICE-EV 2026 — Main Conference Day</div>
+        <div class="tl-note">Parallel Sessions, Keynote Speeches, and Gala Dinner. Nusantara / Balikpapan, Kalimantan.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SPEAKERS
+     Photos use temporary placeholders from i.pravatar.cc.
+     Replace each <img src="…"> with assets/images/<file>.jpg
+     once real headshots are uploaded.
+     ========================================================= -->
+<section id="speakers" class="reveal">
+  <div class="section-label">Invited Speakers</div>
+  <div class="section-title">Keynote &amp; Invited Speakers</div>
+  <div class="section-divider"></div>
+  <div class="speakers-grid">
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <span class="initials">GW</span>
+        <img src="https://i.pravatar.cc/200?img=12" alt="Gilarsi Wahju Setijono" loading="lazy">
+      </div>
+      <div class="speaker-name">Gilarsi Wahju Setijono</div>
+      <div class="speaker-org">VKTR Teknologi Mobilitas</div>
+      <div class="speaker-role">EV Mobility Industry Leader</div>
+      <div class="speaker-type keynote">Keynote</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <span class="initials">HH</span>
+        <img src="https://i.pravatar.cc/200?img=33" alt="Huazhi Hu" loading="lazy">
+      </div>
+      <div class="speaker-name">Huazhi Hu</div>
+      <div class="speaker-org">EHang</div>
+      <div class="speaker-role">Chief Executive Officer</div>
+      <div class="speaker-type keynote">Keynote</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <span class="initials">SN</span>
+        <img src="https://i.pravatar.cc/200?img=13" alt="Prof. dr.ing. Steffen Nijhuis" loading="lazy">
+      </div>
+      <div class="speaker-name">Prof. dr.ing. Steffen Nijhuis</div>
+      <div class="speaker-org">International University</div>
+      <div class="speaker-role">Urban Planning &amp; Infrastructure</div>
+      <div class="speaker-type">Invited</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <span class="initials">MS</span>
+        <img src="https://i.pravatar.cc/200?img=14" alt="Prof. Markus Schläpfer" loading="lazy">
+      </div>
+      <div class="speaker-name">Prof. Markus Schläpfer</div>
+      <div class="speaker-org">International University</div>
+      <div class="speaker-role">Urban Science Researcher</div>
+      <div class="speaker-type">Invited</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <span class="initials">HK</span>
+        <img src="https://i.pravatar.cc/200?img=15" alt="Hariyadi Kaimuddin" loading="lazy">
+      </div>
+      <div class="speaker-name">Hariyadi Kaimuddin</div>
+      <div class="speaker-org">BYD Haka Auto Indonesia</div>
+      <div class="speaker-role">Industry Representative</div>
+      <div class="speaker-type">Invited</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <span class="initials">EZ</span>
+        <img src="https://i.pravatar.cc/200?img=51" alt="Eagle Zhou" loading="lazy">
+      </div>
+      <div class="speaker-name">Eagle Zhou</div>
+      <div class="speaker-org">BYD Motor Indonesia</div>
+      <div class="speaker-role">EV Operations &amp; Strategy</div>
+      <div class="speaker-type">Invited</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <span class="initials">KH</span>
+        <img src="https://i.pravatar.cc/200?img=52" alt="Kariyanto Hardjosoemarto" loading="lazy">
+      </div>
+      <div class="speaker-name">Kariyanto Hardjosoemarto</div>
+      <div class="speaker-org">VinFast Indonesia</div>
+      <div class="speaker-role">Automotive Industry Leader</div>
+      <div class="speaker-type">Invited</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <span class="initials">MC</span>
+        <img src="https://i.pravatar.cc/200?img=53" alt="Muchamad Chaliq Fadli" loading="lazy">
+      </div>
+      <div class="speaker-name">Muchamad Chaliq Fadli</div>
+      <div class="speaker-org">PLN UID Kaltimtara</div>
+      <div class="speaker-role">Energy Infrastructure</div>
+      <div class="speaker-type">Invited</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <span class="initials">AA</span>
+        <img src="https://i.pravatar.cc/200?img=54" alt="Aditya F. Arif" loading="lazy">
+      </div>
+      <div class="speaker-name">Aditya F. Arif</div>
+      <div class="speaker-org">Indonesia Battery Corporation</div>
+      <div class="speaker-role">Battery Technology &amp; Policy</div>
+      <div class="speaker-type">Invited</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <span class="initials">JS</span>
+        <img src="https://i.pravatar.cc/200?img=60" alt="Jin Song" loading="lazy">
+      </div>
+      <div class="speaker-name">Jin Song</div>
+      <div class="speaker-org">Huawei Digital Power Indonesia</div>
+      <div class="speaker-role">Chief Executive Officer</div>
+      <div class="speaker-type">Invited</div>
+    </div>
+  </div>
+  <p style="font-size:0.75rem;color:var(--text2);margin-top:1rem;text-align:center;">
+    * Speaker photos are temporary placeholders and will be replaced with official portraits once received.
+  </p>
+</section>
+
+<!-- =========================================================
+     SCHEDULE
+     ========================================================= -->
+<section class="schedule-section reveal" id="schedule">
+  <div class="section-label">Day Program</div>
+  <div class="section-title">Conference Rundown — August 20, 2026</div>
+  <div class="section-divider"></div>
+  <div class="schedule-grid">
+    <div class="sch-separator">Morning Program</div>
+    <div class="sch-time">07:30–08:30</div><div class="sch-activity">Registration and Participant Arrival</div>
+    <div class="sch-time">08:30–08:40</div><div class="sch-activity">Safety Induction — Opening by Master of Ceremonies</div>
+    <div class="sch-time">08:40–08:50</div><div class="sch-activity highlight">Traditional Dance Performance</div>
+    <div class="sch-time">08:50–09:00</div><div class="sch-activity">Opening Remarks by the Conference Chairman</div>
+    <div class="sch-time">09:00–09:10</div><div class="sch-activity">Opening Remarks by the Rector</div>
+    <div class="sch-time">09:10–09:15</div><div class="sch-activity">Group Photo Session</div>
+    <div class="sch-time">09:15–10:00</div><div class="sch-activity keynote"><svg class="icon"><use href="#i-bolt"/></svg> First Keynote Speech</div>
+    <div class="sch-time">10:00–10:15</div><div class="sch-activity">Q&amp;A Session</div>
+
+    <div class="sch-separator">Symposium</div>
+    <div class="sch-time">10:15–10:30</div><div class="sch-activity">Symposium Preparation</div>
+    <div class="sch-time">10:30–11:15</div><div class="sch-activity keynote"><svg class="icon"><use href="#i-clipboard"/></svg> Symposium Session</div>
+    <div class="sch-time">11:15–11:30</div><div class="sch-activity">Discussion Session</div>
+    <div class="sch-time">11:30–13:00</div><div class="sch-activity"><svg class="icon"><use href="#i-utensils"/></svg> Lunch Break</div>
+
+    <div class="sch-separator">Afternoon — Parallel Sessions</div>
+    <div class="sch-time">13:00–16:00</div><div class="sch-activity keynote"><svg class="icon"><use href="#i-microscope"/></svg> Parallel Paper Presentation Sessions</div>
+    <div class="sch-time">16:00–16:30</div><div class="sch-activity">Closing Session Preparation</div>
+    <div class="sch-time">16:30–17:00</div><div class="sch-activity highlight"><svg class="icon"><use href="#i-trophy"/></svg> Best Presenter &amp; Best Paper Awards — Closing Remarks</div>
+
+    <div class="sch-separator">Gala Dinner</div>
+    <div class="sch-time">17:00–19:00</div><div class="sch-activity">Gala Dinner Preparation</div>
+    <div class="sch-time">19:00–21:30</div><div class="sch-activity gala"><svg class="icon"><use href="#i-wine"/></svg> Gala Dinner</div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FEES
+     ========================================================= -->
+<section id="fees" class="reveal">
+  <div class="section-label">Registration</div>
+  <div class="section-title">Registration Fees</div>
+  <div class="section-divider"></div>
+  <div class="fees-grid">
+    <div class="fee-card">
+      <div class="fee-icon"><svg class="icon icon-lg"><use href="#i-grad-cap"/></svg></div>
+      <div class="fee-title">FSTI ITK Students</div>
+      <div class="fee-amount free">FREE</div>
+      <div class="fee-desc">Complimentary attendance for FSTI ITK students without paper presentation. Limited seats available.</div>
+      <div class="fee-note">No presentation required · Limited availability</div>
+    </div>
+    <div class="fee-card featured">
+      <div class="fee-icon"><svg class="icon icon-lg"><use href="#i-flag"/></svg></div>
+      <div class="fee-title">Domestic Participants</div>
+      <div class="fee-amount">IDR 500K</div>
+      <div class="fee-desc">For Indonesian researchers, academics, and professionals presenting their paper at the conference.</div>
+      <div class="fee-note">IDR 500,000 · Includes access to all sessions + Gala Dinner</div>
+    </div>
+    <div class="fee-card">
+      <div class="fee-icon"><svg class="icon icon-lg"><use href="#i-globe"/></svg></div>
+      <div class="fee-title">International Participants</div>
+      <div class="fee-amount">USD 50</div>
+      <div class="fee-desc">For international researchers and professionals presenting their paper at the conference.</div>
+      <div class="fee-note">USD 50.00 · Includes all sessions + Gala Dinner</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SUBMISSION
+     ========================================================= -->
+<section class="submission reveal" id="submission">
+  <div class="section-label">Paper Submission</div>
+  <div class="section-title">Submit Your Research</div>
+  <div class="section-divider"></div>
+  <div class="sub-grid">
+    <div>
+      <div class="sub-info">
+        <p style="color:var(--text2);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.8;">
+          NICE-EV 2026 accepts abstract and full paper submissions via EasyChair. Selected peer-reviewed papers will be published in our official proceedings.
+        </p>
+        <ul>
+          <li>Abstract submissions welcome from all registered authors</li>
+          <li>Selected full-text papers: Proceedings in Scientific.net</li>
+          <li>Book of Abstracts with ISBN published by ITK Press</li>
+          <li>EasyChair processing fee: USD 7.40 / IDR 131,000 per submission</li>
+          <li>Deadline for full paper: <strong style="color:var(--accent3)">June 25, 2026</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sub-box">
+      <div class="sub-box-title">Submission Portal</div>
+      <div class="sub-detail"><strong>Platform:</strong> EasyChair Conference Management</div>
+      <div class="sub-detail"><strong>Submission Deadline:</strong> June 25, 2026</div>
+      <div class="sub-detail"><strong>Notification:</strong> July 15, 2026</div>
+      <div class="sub-detail"><strong>Camera-Ready:</strong> August 1, 2026</div>
+      <div class="sub-detail"><strong>Processing Fee:</strong> USD 7.40 / IDR 131,000</div>
+      <a href="#" class="sub-cta">
+        Submit via EasyChair
+        <svg class="icon"><use href="#i-arrow-right"/></svg>
+      </a>
+      <p style="font-size:0.7rem;color:var(--text2);margin-top:0.75rem;text-align:center;">
+        EasyChair link will be activated upon portal launch
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SPONSORS
+     ========================================================= -->
+<section class="sponsors-section reveal" id="sponsors">
+  <div class="section-label">Partnership</div>
+  <div class="section-title">Become a Sponsor</div>
+  <div class="section-divider"></div>
+  <div class="sponsor-prospectus">
+    <div class="sponsor-title">Official Industry Partner — Single Tier Sponsorship</div>
+    <div class="sponsor-benefit">
+      <div class="sponsor-benefit-icon"><svg class="icon"><use href="#i-mic"/></svg></div>
+      <div class="sponsor-benefit-text"><strong>Plenary Speaking Slot</strong> — One dedicated 15-minute presentation during the conference</div>
+    </div>
+    <div class="sponsor-benefit">
+      <div class="sponsor-benefit-icon"><svg class="icon"><use href="#i-tag"/></svg></div>
+      <div class="sponsor-benefit-text"><strong>Premium Brand Placement</strong> — Logo branding on homepage, stage backdrops, broadcasts, and abstract booklet cover</div>
+    </div>
+    <div class="sponsor-benefit">
+      <div class="sponsor-benefit-icon"><svg class="icon"><use href="#i-building"/></svg></div>
+      <div class="sponsor-benefit-text"><strong>Exhibition &amp; Networking Space</strong> — Dedicated booth/table for literature or live product demonstrations</div>
+    </div>
+    <div class="sponsor-benefit">
+      <div class="sponsor-benefit-icon"><svg class="icon"><use href="#i-ticket"/></svg></div>
+      <div class="sponsor-benefit-text"><strong>Full Access Passes</strong> — Two (2) complimentary all-access passes including Gala Dinner</div>
+    </div>
+    <div class="sponsor-benefit">
+      <div class="sponsor-benefit-icon"><svg class="icon"><use href="#i-gift"/></svg></div>
+      <div class="sponsor-benefit-text"><strong>Conference Bag Insert</strong> — Corporate materials distributed to every registered participant and keynote speaker</div>
+    </div>
+    <div class="sponsor-investment">
+      <div>
+        <div class="sponsor-tier-label">Investment</div>
+        <div class="sponsor-price">
+          <span class="idr">IDR 15,000,000</span>
+          <span class="usd">/ USD 1,000</span>
+        </div>
+      </div>
+      <a href="mailto:niceev2026@itk.ac.id" class="btn-primary" style="font-size:0.8rem;padding:12px 24px;">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ORGANIZER
+     ========================================================= -->
+<section class="organizer reveal">
+  <div class="section-label">Organized by</div>
+  <div class="section-title">Conference Organizers</div>
+  <div class="section-divider" style="margin:0 auto 3rem;"></div>
+  <div class="org-badges">
+    <div class="org-badge">
+      <div class="org-logo-box">
+        <img src="assets/images/Logo_of_Ibu_Kota_Nusantara.svg" alt="Otorita Ibu Kota Nusantara">
+      </div>
+      <div class="org-name">Technical Hub Division — Otorita Ibu Kota Nusantara</div>
+    </div>
+    <div class="org-cross">×</div>
+    <div class="org-badge">
+      <div class="org-logo-box">
+        <img src="assets/images/logo-fsti.png" alt="FSTI ITK — Institut Teknologi Kalimantan">
+      </div>
+      <div class="org-name">Faculty of Science &amp; Technology in Industry — Institut Teknologi Kalimantan</div>
+    </div>
+  </div>
+  <p style="margin-top:2rem;font-size:0.8rem;color:var(--text2);max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7;">
+    NICE-EV 2026 serves as the premier international platform bridging cutting-edge academic research with real-world industrial deployment in the context of Indonesia's new smart capital.
+  </p>
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer>
+  <div class="footer-brand">
+    <img src="assets/images/NICE-EV.png" alt="NICE-EV 2026" class="footer-logo-img">
+    <div>
+      <div class="footer-logo">NICE<span>-EV</span> 2026</div>
+      <div style="font-size:0.75rem;color:var(--text2);margin-top:0.5rem;">
+        Nusantara International Conference on Electric Vehicle Architectures
+      </div>
+    </div>
+  </div>
+  <div class="footer-info">
+    August 20, 2026 · Nusantara / Balikpapan, Indonesia<br>
+    THD OIKN × FSTI ITK<br>
+    <a href="mailto:niceev2026@itk.ac.id">niceev2026@itk.ac.id</a>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
