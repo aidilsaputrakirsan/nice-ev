@@ -11,6 +11,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script>
+  // Apply stored theme before render to avoid flash
+  (function () {
+    var t = localStorage.getItem('nice-ev-theme');
+    if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  })();
+</script>
 </head>
 <body>
 
@@ -44,6 +51,7 @@
   <symbol id="i-send" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
   <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
 </svg>
 
 <!-- =========================================================
@@ -63,13 +71,19 @@
     <li><a href="#fees">Fees</a></li>
     <li><a href="#sponsors">Sponsors</a></li>
   </ul>
-  <a href="#submission" class="nav-cta">
-    <svg class="icon"><use href="#i-send"/></svg>
-    Submit Paper
-  </a>
-  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-    <svg class="icon icon-lg"><use href="#i-menu"/></svg>
-  </button>
+  <div class="nav-right">
+    <a href="#submission" class="nav-cta">
+      <svg class="icon"><use href="#i-send"/></svg>
+      Submit Paper
+    </a>
+    <button class="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+      <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+      <svg class="icon icon-sun"><use href="#i-sun"/></svg>
+    </button>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="icon icon-lg"><use href="#i-menu"/></svg>
+    </button>
+  </div>
 </nav>
 
 <!-- =========================================================
@@ -131,7 +145,7 @@
       CFP Deadline Countdown
     </div>
     <div style="font-size:0.75rem;color:var(--text2);margin-top:2px;">
-      Full Paper Submission: <strong style="color:var(--accent3)">June 25, 2026</strong>
+      Abstract Submission: <strong style="color:var(--accent3)">June 30, 2026</strong>
     </div>
   </div>
   <div class="countdown-items">
@@ -267,16 +281,16 @@
       </div>
     </div>
     <div class="timeline-item">
-      <div class="tl-date"><strong>June 25, 2026</strong>Thursday</div>
+      <div class="tl-date"><strong>June 30, 2026</strong>Tuesday</div>
       <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
       <div class="tl-content">
         <div class="tl-badge">Deadline</div>
-        <div class="tl-title">Full Paper Submission Deadline</div>
-        <div class="tl-note">Authors have approximately 5 weeks from CFP launch to submit their full papers.</div>
+        <div class="tl-title">Abstract Submission Deadline</div>
+        <div class="tl-note">Authors have approximately 5 weeks from CFP launch to submit their abstracts.</div>
       </div>
     </div>
     <div class="timeline-item">
-      <div class="tl-date"><strong>July 15, 2026</strong>Wednesday</div>
+      <div class="tl-date"><strong>July 25, 2026</strong>Saturday</div>
       <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
       <div class="tl-content">
         <div class="tl-title">Notification of Acceptance</div>
@@ -287,8 +301,8 @@
       <div class="tl-date"><strong>August 1, 2026</strong>Saturday</div>
       <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
       <div class="tl-content">
-        <div class="tl-title">Camera-Ready &amp; Registration Deadline</div>
-        <div class="tl-note">Final manuscripts and registration fees are due to lock in presentation schedule.</div>
+        <div class="tl-title">Registration Deadline</div>
+        <div class="tl-note">Final abstracts and registration fees are due to lock in the presentation schedule.</div>
       </div>
     </div>
     <div class="timeline-item">
@@ -325,7 +339,7 @@
     <div class="speaker-card">
       <div class="speaker-photo">
         <span class="initials">GW</span>
-        <img src="https://i.pravatar.cc/200?img=12" alt="Gilarsi Wahju Setijono" loading="lazy">
+        <img src="https://i.pravatar.cc/400?img=12" alt="Gilarsi Wahju Setijono" loading="lazy">
       </div>
       <div class="speaker-name">Gilarsi Wahju Setijono</div>
       <div class="speaker-org">VKTR Teknologi Mobilitas</div>
@@ -335,7 +349,7 @@
     <div class="speaker-card">
       <div class="speaker-photo">
         <span class="initials">HH</span>
-        <img src="https://i.pravatar.cc/200?img=33" alt="Huazhi Hu" loading="lazy">
+        <img src="https://i.pravatar.cc/400?img=33" alt="Huazhi Hu" loading="lazy">
       </div>
       <div class="speaker-name">Huazhi Hu</div>
       <div class="speaker-org">EHang</div>
@@ -345,7 +359,7 @@
     <div class="speaker-card">
       <div class="speaker-photo">
         <span class="initials">SN</span>
-        <img src="https://i.pravatar.cc/200?img=13" alt="Prof. dr.ing. Steffen Nijhuis" loading="lazy">
+        <img src="https://i.pravatar.cc/400?img=13" alt="Prof. dr.ing. Steffen Nijhuis" loading="lazy">
       </div>
       <div class="speaker-name">Prof. dr.ing. Steffen Nijhuis</div>
       <div class="speaker-org">International University</div>
@@ -355,7 +369,7 @@
     <div class="speaker-card">
       <div class="speaker-photo">
         <span class="initials">MS</span>
-        <img src="https://i.pravatar.cc/200?img=14" alt="Prof. Markus Schläpfer" loading="lazy">
+        <img src="https://i.pravatar.cc/400?img=14" alt="Prof. Markus Schläpfer" loading="lazy">
       </div>
       <div class="speaker-name">Prof. Markus Schläpfer</div>
       <div class="speaker-org">International University</div>
@@ -365,7 +379,7 @@
     <div class="speaker-card">
       <div class="speaker-photo">
         <span class="initials">HK</span>
-        <img src="https://i.pravatar.cc/200?img=15" alt="Hariyadi Kaimuddin" loading="lazy">
+        <img src="https://i.pravatar.cc/400?img=15" alt="Hariyadi Kaimuddin" loading="lazy">
       </div>
       <div class="speaker-name">Hariyadi Kaimuddin</div>
       <div class="speaker-org">BYD Haka Auto Indonesia</div>
@@ -375,7 +389,7 @@
     <div class="speaker-card">
       <div class="speaker-photo">
         <span class="initials">EZ</span>
-        <img src="https://i.pravatar.cc/200?img=51" alt="Eagle Zhou" loading="lazy">
+        <img src="https://i.pravatar.cc/400?img=51" alt="Eagle Zhou" loading="lazy">
       </div>
       <div class="speaker-name">Eagle Zhou</div>
       <div class="speaker-org">BYD Motor Indonesia</div>
@@ -385,7 +399,7 @@
     <div class="speaker-card">
       <div class="speaker-photo">
         <span class="initials">KH</span>
-        <img src="https://i.pravatar.cc/200?img=52" alt="Kariyanto Hardjosoemarto" loading="lazy">
+        <img src="https://i.pravatar.cc/400?img=52" alt="Kariyanto Hardjosoemarto" loading="lazy">
       </div>
       <div class="speaker-name">Kariyanto Hardjosoemarto</div>
       <div class="speaker-org">VinFast Indonesia</div>
@@ -395,7 +409,7 @@
     <div class="speaker-card">
       <div class="speaker-photo">
         <span class="initials">MC</span>
-        <img src="https://i.pravatar.cc/200?img=53" alt="Muchamad Chaliq Fadli" loading="lazy">
+        <img src="https://i.pravatar.cc/400?img=53" alt="Muchamad Chaliq Fadli" loading="lazy">
       </div>
       <div class="speaker-name">Muchamad Chaliq Fadli</div>
       <div class="speaker-org">PLN UID Kaltimtara</div>
@@ -405,7 +419,7 @@
     <div class="speaker-card">
       <div class="speaker-photo">
         <span class="initials">AA</span>
-        <img src="https://i.pravatar.cc/200?img=54" alt="Aditya F. Arif" loading="lazy">
+        <img src="https://i.pravatar.cc/400?img=54" alt="Aditya F. Arif" loading="lazy">
       </div>
       <div class="speaker-name">Aditya F. Arif</div>
       <div class="speaker-org">Indonesia Battery Corporation</div>
@@ -415,7 +429,7 @@
     <div class="speaker-card">
       <div class="speaker-photo">
         <span class="initials">JS</span>
-        <img src="https://i.pravatar.cc/200?img=60" alt="Jin Song" loading="lazy">
+        <img src="https://i.pravatar.cc/400?img=60" alt="Jin Song" loading="lazy">
       </div>
       <div class="speaker-name">Jin Song</div>
       <div class="speaker-org">Huawei Digital Power Indonesia</div>
@@ -476,21 +490,28 @@
       <div class="fee-title">FSTI ITK Students</div>
       <div class="fee-amount free">FREE</div>
       <div class="fee-desc">Complimentary attendance for FSTI ITK students without paper presentation. Limited seats available.</div>
-      <div class="fee-note">No presentation required · Limited availability</div>
+      <div class="fee-note">No presentation · Without Gala Dinner · Limited seats</div>
     </div>
     <div class="fee-card featured">
+      <div class="fee-icon"><svg class="icon icon-lg"><use href="#i-check"/></svg></div>
+      <div class="fee-title">All Participants (1 Presentation)</div>
+      <div class="fee-amount free">FREE</div>
+      <div class="fee-desc">Complimentary for both domestic and international participants presenting one paper at the conference.</div>
+      <div class="fee-note">Includes all sessions + Gala Dinner</div>
+    </div>
+    <div class="fee-card">
       <div class="fee-icon"><svg class="icon icon-lg"><use href="#i-flag"/></svg></div>
-      <div class="fee-title">Domestic Participants</div>
+      <div class="fee-title">Domestic — Additional Paper</div>
       <div class="fee-amount">IDR 500K</div>
-      <div class="fee-desc">For Indonesian researchers, academics, and professionals presenting their paper at the conference.</div>
-      <div class="fee-note">IDR 500,000 · Includes access to all sessions + Gala Dinner</div>
+      <div class="fee-desc">For each additional presentation submitted by Indonesian researchers beyond the first paper.</div>
+      <div class="fee-note">IDR 500,000 per additional presentation</div>
     </div>
     <div class="fee-card">
       <div class="fee-icon"><svg class="icon icon-lg"><use href="#i-globe"/></svg></div>
-      <div class="fee-title">International Participants</div>
+      <div class="fee-title">International — Additional Paper</div>
       <div class="fee-amount">USD 50</div>
-      <div class="fee-desc">For international researchers and professionals presenting their paper at the conference.</div>
-      <div class="fee-note">USD 50.00 · Includes all sessions + Gala Dinner</div>
+      <div class="fee-desc">For each additional presentation submitted by international researchers beyond the first paper.</div>
+      <div class="fee-note">USD 50.00 per additional presentation</div>
     </div>
   </div>
 </section>
@@ -506,23 +527,23 @@
     <div>
       <div class="sub-info">
         <p style="color:var(--text2);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.8;">
-          NICE-EV 2026 accepts abstract and full paper submissions via EasyChair. Selected peer-reviewed papers will be published in our official proceedings.
+          NICE-EV 2026 is an abstract-submission conference managed via EasyChair. Selected peer-reviewed full-text papers will be published post-conference in our official proceedings.
         </p>
         <ul>
-          <li>Abstract submissions welcome from all registered authors</li>
-          <li>Selected full-text papers: Proceedings in Scientific.net</li>
-          <li>Book of Abstracts with ISBN published by ITK Press</li>
+          <li>Pre-conference: <strong>abstract submissions only</strong></li>
+          <li>Post-conference: selected full-text papers — Proceedings in Scientific.net (no guaranteed indexing label)</li>
+          <li>Book of Abstracts with ISBN published by ITK Press for all submissions</li>
           <li>EasyChair processing fee: USD 7.40 / IDR 131,000 per submission</li>
-          <li>Deadline for full paper: <strong style="color:var(--accent3)">June 25, 2026</strong></li>
+          <li>Abstract deadline: <strong style="color:var(--accent3)">June 30, 2026</strong></li>
         </ul>
       </div>
     </div>
     <div class="sub-box">
       <div class="sub-box-title">Submission Portal</div>
       <div class="sub-detail"><strong>Platform:</strong> EasyChair Conference Management</div>
-      <div class="sub-detail"><strong>Submission Deadline:</strong> June 25, 2026</div>
-      <div class="sub-detail"><strong>Notification:</strong> July 15, 2026</div>
-      <div class="sub-detail"><strong>Camera-Ready:</strong> August 1, 2026</div>
+      <div class="sub-detail"><strong>Abstract Deadline:</strong> June 30, 2026</div>
+      <div class="sub-detail"><strong>Notification:</strong> July 25, 2026</div>
+      <div class="sub-detail"><strong>Registration:</strong> August 1, 2026</div>
       <div class="sub-detail"><strong>Processing Fee:</strong> USD 7.40 / IDR 131,000</div>
       <a href="#" class="sub-cta">
         Submit via EasyChair

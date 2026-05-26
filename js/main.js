@@ -3,13 +3,14 @@
    1. Countdown
    2. Nav: mobile toggle, scrolled state, scroll-spy
    3. Reveal-on-scroll
+   4. Theme toggle (light = default, dark = optional)
    ========================================================= */
 
 (() => {
   'use strict';
 
   /* ---------- 1. Countdown ---------- */
-  const deadline = new Date('2026-06-25T23:59:59').getTime();
+  const deadline = new Date('2026-06-30T23:59:59').getTime();
   const els = {
     days: document.getElementById('cd-days'),
     hours: document.getElementById('cd-hours'),
@@ -88,6 +89,22 @@
       { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
     );
     sections.forEach((s) => spy.observe(s));
+  }
+
+  /* ---------- 4. Theme toggle ---------- */
+  const themeToggle = document.querySelector('.theme-toggle');
+  const STORAGE_KEY = 'nice-ev-theme';
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem(STORAGE_KEY, 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem(STORAGE_KEY, 'dark');
+      }
+    });
   }
 
   /* ---------- 3. Reveal on scroll ---------- */
