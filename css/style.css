@@ -1170,6 +1170,30 @@ footer {
 }
 .footer-info a { color: var(--accent); text-decoration: none; }
 
+/* ---------- 15b. Acknowledgment ---------- */
+.acknowledgment {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 5%;
+}
+.acknowledgment-heading {
+  font-size: 0.75rem;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.acknowledgment-text {
+  font-size: 0.85rem;
+  color: var(--text2);
+  line-height: 1.7;
+  max-width: 900px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* ---------- 16. Animations ---------- */
 .reveal {
   opacity: 0;
