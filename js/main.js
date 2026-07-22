@@ -10,7 +10,7 @@
   'use strict';
 
   /* ---------- 1. Countdown ---------- */
-  const deadline = new Date('2026-06-30T23:59:59').getTime();
+  const deadline = new Date('2026-07-25T23:59:59').getTime();
   const els = {
     days: document.getElementById('cd-days'),
     hours: document.getElementById('cd-hours'),
