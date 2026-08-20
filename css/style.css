@@ -1032,6 +1032,25 @@ section { padding: 80px 5%; }
   transition: background 0.2s;
 }
 .sub-cta:hover { background: var(--accent2); }
+.sub-cta-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0.75rem;
+  background: transparent;
+  color: var(--text);
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid color-mix(in srgb, var(--text) 22%, transparent);
+  transition: border-color 0.2s;
+}
+.sub-cta-outline:hover { border-color: var(--text); }
 
 /* ---------- 15. Organizer & footer ---------- */
 .organizer { text-align: center; }
